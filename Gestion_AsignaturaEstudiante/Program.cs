@@ -21,7 +21,7 @@ class Program
             Console.WriteLine("5. ver porcentaje de aprobados de un grupo");
             Console.WriteLine("6. salir");
             Console.Write("seleccione una opción: ");
-            string opcion = Console.ReadLine();
+            string? opcion = Console.ReadLine();
 
             switch (opcion)
             {
@@ -55,7 +55,7 @@ class Program
     static void CrearGrupo()
     {
         Console.Write("\ningrese el nombre del nuevo grupo: ");
-        string nombreGrupo = Console.ReadLine();
+        string? nombreGrupo = Console.ReadLine();
 
         // verifica que no se repita el nombre del grupo
         if (asignatura.Grupos.Any(g => g.Nombre.Equals(nombreGrupo, StringComparison.OrdinalIgnoreCase)))
@@ -69,7 +69,7 @@ class Program
     }
 
     // permite seleccionar un grupo de la lista de grupos existentes
-    static Grupo SeleccionarGrupo()
+    static Grupo? SeleccionarGrupo()
     {
         if (!asignatura.Grupos.Any())
         {
@@ -112,13 +112,13 @@ class Program
             Console.WriteLine($"\nestudiante #{i + 1}");
 
             Console.Write("nombre: ");
-            string nombre = Console.ReadLine();
+            string? nombre = Console.ReadLine();
 
             Console.Write("matrícula: ");
-            string matricula = Console.ReadLine();
+            string? matricula = Console.ReadLine();
 
             Console.Write("tipo (1-presencial, 2-distancia): ");
-            string tipoEntrada = Console.ReadLine();
+            string? tipoEntrada = Console.ReadLine();
 
             Estudiante estudiante;
             if (tipoEntrada == "1")

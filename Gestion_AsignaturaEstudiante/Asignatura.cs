@@ -18,7 +18,7 @@ namespace Gestion_AsignaturaEstudiante
         }
 
         // crea un grupo nuevo y lo añade a la lista de grupos
-        public Grupo CrearGrupo(string nombreGrupo)
+        public Grupo CrearGrupo(string? nombreGrupo)
         {
             var grupo = new Grupo(nombreGrupo);
             Grupos.Add(grupo);
